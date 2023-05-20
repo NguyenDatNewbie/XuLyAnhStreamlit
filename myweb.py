@@ -4,7 +4,6 @@ from streamlit_option_menu import option_menu
 import base64
 import tensorflow as tf
 from PIL import Image
-import cv2
 import tkinter as tk
 from tkinter import filedialog
 import shutil
