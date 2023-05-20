@@ -2,10 +2,6 @@ import streamlit as st
 import streamlit_option_menu
 from streamlit_option_menu import option_menu
 import base64
-import tensorflow as tf
-from PIL import Image
-import tkinter as tk
-from tkinter import filedialog
 import shutil
 import os
 import XuLyAnh.Chapter03Web as webChapter3
