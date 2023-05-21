@@ -4,7 +4,6 @@ import numpy as np
 import cv2 as cv
 import streamlit as st
 import os
-from pynput import keyboard
 def str2bool(v):
     if v.lower() in ['on', 'yes', 'true', 'y', 't']:
         return True
