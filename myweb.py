@@ -1,11 +1,6 @@
 import streamlit as st 
 from streamlit_option_menu import option_menu
 import base64
-import tensorflow as tf
-from PIL import Image
-import cv2
-import tkinter as tk
-from tkinter import filedialog
 import shutil
 import os
 import XuLyAnh.Chapter03Web as webChapter3
@@ -129,9 +124,13 @@ if selected == "Nhận dạng khuôn mặt":
     else: getFace.run()
 if selected == "Xử lý ảnh":
     st.sidebar.header("Nguyễn Hữu Đạt - 20110630")
-    file_upload = './file_upload'
-    shutil.rmtree(file_upload)
-    os.mkdir(file_upload)
+    
+    for root, dirs, files in os.walk('./file_upload'):
+        for f in files:
+            os.unlink(os.path.join(root, f))
+        for d in dirs:
+            shutil.rmtree(os.path.join(root, d))
+    
     image_file = st.sidebar.file_uploader("Choose a image file",type=['png','jpg','tif','jpeg'])
     
     option = st.sidebar.selectbox('Chọn chương xử lý ảnh',('Chương 3','Chương 4', 'Chương 5','Chương 9'))
