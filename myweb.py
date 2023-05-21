@@ -124,7 +124,7 @@ if selected == "Nhận dạng khuôn mặt":
     else: getFace.run()
 if selected == "Xử lý ảnh":
     st.sidebar.header("Nguyễn Hữu Đạt - 20110630")
-    file_upload = './file_upload'
+    file_upload = '/file_upload'
     shutil.rmtree(file_upload)
     os.mkdir(file_upload)
     image_file = st.sidebar.file_uploader("Choose a image file",type=['png','jpg','tif','jpeg'])
