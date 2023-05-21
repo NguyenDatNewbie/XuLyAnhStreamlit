@@ -4,8 +4,8 @@ import cv2
 import XuLyAnh.Chapter03 as chapter3
 
 def getImagePathFromBrowser(image_file):
-    path_file = os.path.join("file_upload",image_file.name)
-    with open(os.path.join("file_upload",image_file.name),"wb") as f:
+    path_file = os.path.join("./file_upload",image_file.name)
+    with open(os.path.join("./file_upload",image_file.name),"wb") as f:
         f.write(image_file.getbuffer())
     fullpath = ""+os.getcwd()+"/"+path_file
     imgin = cv2.imread(fullpath,cv2.IMREAD_GRAYSCALE)
