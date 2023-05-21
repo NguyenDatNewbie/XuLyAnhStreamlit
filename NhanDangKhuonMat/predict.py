@@ -96,5 +96,4 @@ def run():
 
         FRAME_WINDOW.image(frame, channels='BGR')
         
-    cv.destroyAllWindows()
     

@@ -109,5 +109,4 @@ def run():
             
         
             
-        cv.destroyAllWindows()
 
